@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="327.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.userViewPageController">
+   <top>
+      <HBox prefHeight="25.0" prefWidth="400.0" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backClick" prefHeight="25.0" prefWidth="60.0" text="back">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Button>
+            <Text fx:id="albumStatus" strokeType="OUTSIDE" strokeWidth="0.0" text="Photo Library: Album Name">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </Text>
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logoutClick" prefHeight="25.0" prefWidth="60.0" text="logout">
+               <HBox.margin>
+                  <Insets left="70.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <bottom>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="albumPhotos" onMouseClicked="#listViewClick">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin></ListView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="196.0">
+               <children>
+                  <Button fx:id="addPhotoButton" mnemonicParsing="false" onAction="#addPhotoClick" prefHeight="25.0" prefWidth="100.0" text="add photo">
+                     <HBox.margin>
+                        <Insets left="110.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="removePhotoButton" mnemonicParsing="false" onAction="#removePhotoClick" prefHeight="25.0" prefWidth="100.0" text="remove photo">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="captionPhotoButton" alignment="CENTER" mnemonicParsing="false" onAction="#captionPhotoClick" prefHeight="25.0" prefWidth="110.0" text="recaption photo">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="196.0">
+               <children>
+                  <Button fx:id="copyPhotoButton1" mnemonicParsing="false" onAction="#copyPhotoClick" prefHeight="25.0" prefWidth="100.0" text="copy photo">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="movePhotoButton1" mnemonicParsing="false" onAction="#movePhotoClick" prefHeight="25.0" prefWidth="100.0" text="move photo">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="viewSlideShowButton1" alignment="CENTER" mnemonicParsing="false" onAction="#viewSlideShowClick" prefHeight="25.0" prefWidth="110.0" text="view slideshow">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </bottom>
+</BorderPane>
